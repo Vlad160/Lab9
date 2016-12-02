@@ -1,16 +1,13 @@
 package com.Vlad160;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by Vlad on 26.11.2016.
- */
 
-
-public class Computer {
+public class Computer implements Serializable {
     private String name;
     private Condition condition;
     private long startPrice;
@@ -22,7 +19,7 @@ public class Computer {
         this.condition = Condition.Default;
         this.startPrice = 0;
         this.currentPrice = 0;
-        this.arriveDate = new Date(228l);
+        this.arriveDate = new Date(228L);
     }
 
     public Computer(String name, Condition condition, long startPrice, long currentPrice, String data) {
@@ -45,6 +42,19 @@ public class Computer {
         str = str.concat(" " + startPrice + " " + currentPrice + " ");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         str = str.concat(simpleDateFormat.format(arriveDate));
+        return str;
+    }
+
+    public String getComputer() {
+        String str = name;
+        str = str.concat("\n");
+        str = str.concat("" + condition);
+        str = str.concat("\n");
+        str = str.concat("" + startPrice + "\n" + currentPrice);
+        str = str.concat("\n");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        str = str.concat(simpleDateFormat.format(arriveDate));
+        str = str.concat("\n");
         return str;
     }
 }

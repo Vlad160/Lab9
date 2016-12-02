@@ -1,7 +1,8 @@
 package com.Vlad160;
 
 public enum Condition {
-    New,
-    Used,
+    Office,
+    Media,
+    Gaming,
     Default
 }

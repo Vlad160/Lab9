@@ -6,13 +6,14 @@ import java.io.Serializable;
 
 
 abstract class ACompany implements Serializable{
-        String name;
+         String name;
     ACompany(){
         this.name = "";
     }
     ACompany(String name){
-        this.name = "";
+        this.name = name;
     }
-    abstract void add(Computer computer);
-
+    abstract public void add(Computer computer);
+    abstract public String getName();
+    abstract public void setName(String name);
 }

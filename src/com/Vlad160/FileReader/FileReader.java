@@ -1,13 +1,10 @@
 package com.Vlad160.FileReader;
 
 import com.Vlad160.Company;
-import com.Vlad160.Computer;
+import javax.crypto.SecretKey;
 
-import java.io.RandomAccessFile;
-
-/**
- * Created by Vlad on 26.11.2016.
- */
 interface  FileReader {
-    boolean ReadComputer(String path, Company company);
+    boolean readComputer(String path, Company company);
+    Company readBytes(String path);
+    boolean read(String path, SecretKey secretKey);
 }
