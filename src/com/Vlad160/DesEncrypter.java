@@ -8,7 +8,6 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Класс реализующий работу с алгоритмом шифрования DES
  *
- * @author Rumoku
  */
 public class DesEncrypter {
     private Cipher ecipher;
